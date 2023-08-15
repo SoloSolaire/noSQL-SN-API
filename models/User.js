@@ -12,7 +12,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
             unique: true,
-            match: []
+            match: ('[a-zA-Z0-9-_.]+@[a-z]\.[a-z]{2,3}')
         },
         thoughts: [{
             type: Schema.Types.ObjectId,
