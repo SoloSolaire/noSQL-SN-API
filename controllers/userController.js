@@ -18,7 +18,7 @@ module.exports = {
     try {
       const user = await User.findOne({ _id: req.params.userId })
 
-        .populate({ path: "thought", select: "-__v" })
+        .populate({ path: "thoughts", select: "-__v" })
         .populate({ path: "friends", select: "-__v" });
 
       if (!user) {
